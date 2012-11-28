@@ -1,0 +1,28 @@
+<%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
+	<div class="login_alert">You need to sign in or sign up before continuing.</div>
+	<% flash.each do |name, msg| %>
+		<%= content_tag :div, msg, :class => "login_alert" if msg.is_a?(String) && msg.to_s != "You need to sign in or sign up before continuing." %>
+	<% end %>
+	<fieldset class="login">
+		<legend>Login</legend>
+		<div class="field">
+			<%= f.label :email %>
+			<%= f.email_field :email%>
+		</div>
+		<div class="field">
+			 <%= f.label :password %>
+			 <%= f.password_field :password %>
+		</div>
+		<div class="field_actions">
+			<%= f.submit "Submit" %>
+			<% if devise_mapping.rememberable? %>
+				<%= f.check_box :remember_me %> <%= f.label :remember_me %>
+			<% end %>
+		</div>
+	</fieldset>
+<% end %>
+<script type="text/javascript">
+	$(function(){
+		$(".alert,.notice").remove();
+	});
+</script>

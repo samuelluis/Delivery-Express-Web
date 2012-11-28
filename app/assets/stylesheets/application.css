@@ -1,0 +1,149 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require_tree .
+*/
+
+.logout-icon{
+	width:24px;
+	height:24px;
+	background: url('logout.png') no-repeat;
+}
+.user-icon{
+	width:24px;
+	height:24px;
+	background: url('account.png') no-repeat;
+}
+.home-icon{
+	width:24px;
+	height:24px;
+	background: url('home.png') no-repeat;
+}
+.report-icon{
+	width:24px;
+	height:24px;
+	background: url('icons/reports.png') no-repeat;
+}
+
+.navbar .brand {
+	margin-top: 5px;
+	color: white;
+	text-shadow: 0 1px 0 black;
+}
+
+.navbar-inner {
+	min-height: 50px;
+	padding-left: 20px;
+	padding-right: 20px;
+	background-color: #2C2C2C;
+	background-image: -moz-linear-gradient(top, #333, #222);
+	background-image: -ms-linear-gradient(top, #333, #222);
+	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#333), to(#222));
+	background-image: -webkit-linear-gradient(top, #333, #222);
+	background-image: -o-linear-gradient(top, #333, #222);
+	background-image: linear-gradient(top, #333, #222);
+	background-repeat: repeat-x;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF333333', endColorstr='#FF222222', GradientType=0);
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	-webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25),inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+	-moz-box-shadow: 0 1px 3px rgba(0,0,0,0.25),inset 0 -1px 0 rgba(0,0,0,0.1);
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25),inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+}
+
+.content footer{
+	display: none;
+}
+
+.nav.pull-right{
+	margin-top: 5px;
+}
+
+
+/*=======================================================================================================
+	LOGIN STYLES
+=======================================================================================================*/
+
+form fieldset.login input[type=text],form fieldset.login input[type=email],form fieldset.login input[type=submit],form fieldset.login input[type=password]{
+    display: inline-block;
+    height: 18px;
+    padding: 4px;
+    margin-bottom: 9px;
+    font-size: 13px;
+    line-height: 18px;
+    color: #555;
+    border: 1px solid #CCC;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    -moz-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+}
+
+div.login_alert{
+    background-color: #F2DEDF;
+    color: #B94A48;
+    padding: 7px;
+    margin: 0 auto;
+    width: 900px;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+    border: 1px solid #EED3D7;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+	margin-top: 20px;
+    
+}
+
+form fieldset.login{
+    width: 480px;
+    margin: 50px auto;
+    padding: 40px 0;
+    background-color: whitesmoke;
+    border: 1px solid #EEE;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+    -moz-box-shadow: inset 0 1px 1px rgba(0,0,0,0.05);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+}
+
+form fieldset.login legend{
+    font-size: 30px;
+    top: -20px;
+    position: relative;
+}
+form fieldset.login .field,form fieldset.login .field_actions{
+    padding-top: 10px;  
+}
+
+form fieldset.login .field label{
+    width: 145px;
+    float: left;
+    text-align: right;
+}
+
+form fieldset.login .field input,form fieldset.login .field_actions input{
+    margin-left: 15px;
+}
+
+form fieldset.login .field_actions input[type=submit]{
+    margin-left: 160px;
+    height: 30px;
+    width: 70px;
+}
+
+
+/*login untill here*/
