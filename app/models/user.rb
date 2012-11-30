@@ -19,7 +19,7 @@ class User < ActiveRecord::Base
   	elsif self.employee
   		self.employee.name
   	else
-  		self.user.email
+  		self.email
   	end
   end
 end

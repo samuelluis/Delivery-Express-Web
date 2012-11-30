@@ -5,6 +5,10 @@ class Stop < ActiveRecord::Base
   has_many :orders
 
   def name
-  	"#{self.travel.name} at #{self.branch.name}"
+  	if self.travel && self.branch
+  		return "#{self.travel.name} at #{self.branch.name}"
+  	else
+  		return (self.new_record?) ? "" : self.id
+  	end
   end
 end

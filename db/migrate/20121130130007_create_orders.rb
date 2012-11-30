@@ -8,14 +8,14 @@ class CreateOrders < ActiveRecord::Migration
       t.date :date
       t.string :status
       t.text :message
-      t.string :type
+      t.string :order_type
       t.integer :box_quantity
       t.date :deliver_date
       t.time :deliver_time
       t.string :receiver_name
       t.has_attached_file :customer_sign
       t.references :reason
-      t.string :delivered_box_quantity
+      t.integer :delivered_box_quantity
 
       t.timestamps
     end

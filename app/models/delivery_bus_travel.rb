@@ -12,6 +12,10 @@ class DeliveryBusTravel < ActiveRecord::Base
   }
 
   def name
-    "#{self.delivery_bus.name} in #{travel.name}"
+    if self.new_record?
+      ""
+    else
+      "#{self.delivery_bus.name} in #{travel.name}"
+    end
   end
 end

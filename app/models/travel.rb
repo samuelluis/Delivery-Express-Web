@@ -6,6 +6,10 @@ class Travel < ActiveRecord::Base
   has_many :stops
 
   def name
-  	"#{self.code} - #{self.date.strftime("%m/%d/%Y")}"
+  	if self.new_record?
+  		"#{self.code}"
+  	else
+  		"#{self.code} - #{self.date.strftime("%m/%d/%Y")}"
+  	end
   end
 end

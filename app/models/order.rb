@@ -14,6 +14,10 @@ class Order < ActiveRecord::Base
   }
 
   def name
-    "#{self.code} to #{self.branch.name}"
+    if self.new_record?
+      "#{self.code}"
+    else
+      "#{self.code} to #{self.branch.name}"
+    end
   end
 end

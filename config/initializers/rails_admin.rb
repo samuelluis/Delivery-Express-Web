@@ -115,9 +115,9 @@ RailsAdmin.config do |config|
         end
       end
       field :box_quantity
-      field :delivery_date do
+      field :deliver_date do
         pretty_value do
-          bindings[:object].delivery_date.strftime("%m/%d/%Y")
+          bindings[:object].deliver_date.strftime("%m/%d/%Y")
         end
       end
       field :deliver_time do
@@ -126,6 +126,9 @@ RailsAdmin.config do |config|
         end
       end
       field :delivered_box_quantity
+      field :branch do
+        searchable [:name, :id]
+      end
     end
   end
 

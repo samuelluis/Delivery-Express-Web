@@ -5,7 +5,11 @@ class Branch < ActiveRecord::Base
   has_many :receivers
   has_many :stops
 
-  def name
-  	"#{self.customer.name} - #{self.name}"
+  def pretty_name
+  	if self.new_record?
+  		"#{self.name}"
+  	else
+  		"#{self.customer.name} - #{self.name}"
+  	end
   end
 end

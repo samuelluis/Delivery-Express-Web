@@ -9,7 +9,7 @@ class Profile < ActiveRecord::Base
   	elsif self.employee
   		"#{self.employee.name} #{self.user.email}"
   	else
-  		self.user.email
+  		self.user.email if self.user
   	end	
   end
 end
