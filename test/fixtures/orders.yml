@@ -1,0 +1,33 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  travel: 
+  code: MyString
+  branch: 
+  supplier: 
+  date: 2012-11-30 09:00:07
+  state: MyString
+  message: MyText
+  po: MyString
+  box_quantity: 1
+  deliver_date: 2012-11-30
+  deliver_time: 2012-11-30 09:00:07
+  receiver_name: MyString
+  reason: 
+  delivered_box_quantity: MyString
+
+two:
+  travel: 
+  code: MyString
+  branch: 
+  supplier: 
+  date: 2012-11-30 09:00:07
+  state: MyString
+  message: MyText
+  po: MyString
+  box_quantity: 1
+  deliver_date: 2012-11-30
+  deliver_time: 2012-11-30 09:00:07
+  receiver_name: MyString
+  reason: 
+  delivered_box_quantity: MyString

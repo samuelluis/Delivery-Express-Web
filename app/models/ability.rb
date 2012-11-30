@@ -2,6 +2,23 @@ class Ability
   include CanCan::Ability
 
   def initialize(user)
+
+    cannot :history
+    cannot :export
+    can :access, :rails_admin
+    can :dashboard
+
+    if user.customer
+        can :read, Order, :branch_id => user.customer.branches
+    elsif user.employee
+        can :read, Employee, :supervisor_name => user.employee.name
+        can :read, Travel, :employee_id => Employee.where(:supervisor_name => user.employee.name)
+        can :read, Order, :stop_id => Stop.where(:travel_id => Travel.where(:employee_id => Employee.where(:supervisor_name => user.employee.name)))
+    else
+        can :manage, :all
+    end
+
+    cannot :destroy, :all
     # Define abilities for the passed in user here. For example:
     #
     #   user ||= User.new # guest user (not logged in)

@@ -10,6 +10,9 @@ gem 'squeel'
 gem 'google-analytics-rails'
 gem 'hirb'
 gem 'jquery-rails'
+gem 'aws-s3'
+gem 'aws-sdk', '~> 1.3.4'
+gem 'paperclip', '~> 3.0'
 
 group :development do
 	gem "rails-erd"

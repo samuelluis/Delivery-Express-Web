@@ -14,6 +14,8 @@ RailsAdmin.config do |config|
   # RailsAdmin may need a way to know who the current user is]
   config.current_user_method { current_user } # auto-generated
 
+  config.authorize_with :cancan
+
   # If you want to track changes on your models:
   # config.audit_with :history, 'User'
 
@@ -103,5 +105,28 @@ RailsAdmin.config do |config|
   #     # you can override a cross-section field configuration in any section with the same syntax `configure :field_name do ... end`
   #     # using `field` instead of `configure` will exclude all other fields and force the ordering
   # end
+
+  config.model Order do
+    list do
+      field :code
+      field :date do
+        pretty_value do
+          bindings[:object].date.strftime("%m/%d/%Y")
+        end
+      end
+      field :box_quantity
+      field :delivery_date do
+        pretty_value do
+          bindings[:object].delivery_date.strftime("%m/%d/%Y")
+        end
+      end
+      field :deliver_time do
+        pretty_value do
+          bindings[:object].deliver_time.strftime("%H:%M")
+        end
+      end
+      field :delivered_box_quantity
+    end
+  end
 
 end

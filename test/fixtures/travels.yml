@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  code: MyString
+  employee: 
+  date: 2012-11-30 08:38:19
+  state: MyString
+
+two:
+  code: MyString
+  employee: 
+  date: 2012-11-30 08:38:19
+  state: MyString

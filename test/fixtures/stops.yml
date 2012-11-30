@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  travel: 
+  branch: 
+  secuence: 1
+
+two:
+  travel: 
+  branch: 
+  secuence: 1

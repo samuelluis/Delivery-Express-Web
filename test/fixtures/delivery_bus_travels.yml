@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  travel: 
+  delivery_bus: 
+  odometer: 1.5
+  fuel: 1.5
+  date: 2012-11-30
+  time: 2012-11-30 11:11:12
+
+two:
+  travel: 
+  delivery_bus: 
+  odometer: 1.5
+  fuel: 1.5
+  date: 2012-11-30
+  time: 2012-11-30 11:11:12
