@@ -4,7 +4,7 @@ class Order < ActiveRecord::Base
   belongs_to :supplier
   belongs_to :reason
 
-  has_attached_file :sign,
+  has_attached_file :customer_sign,
   :storage => :s3,
   :s3_credentials => "#{Rails.root}/config/s3.yml",
   :path => "/order_sign/:id/:filename",

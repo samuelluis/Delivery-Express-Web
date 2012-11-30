@@ -13,7 +13,7 @@ class CreateOrders < ActiveRecord::Migration
       t.date :deliver_date
       t.time :deliver_time
       t.string :receiver_name
-      t.has_attached_file :sign
+      t.has_attached_file :customer_sign
       t.references :reason
       t.string :delivered_box_quantity
 
