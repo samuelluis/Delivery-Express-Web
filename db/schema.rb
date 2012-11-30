@@ -91,19 +91,19 @@ ActiveRecord::Schema.define(:version => 20121130153345) do
     t.date     "date"
     t.string   "status"
     t.text     "message"
-    t.string   "type"
+    t.string   "order_type"
     t.integer  "box_quantity"
     t.date     "deliver_date"
     t.time     "deliver_time"
     t.string   "receiver_name"
-    t.string   "sign_file_name"
-    t.string   "sign_content_type"
-    t.integer  "sign_file_size"
-    t.datetime "sign_updated_at"
+    t.string   "customer_sign_file_name"
+    t.string   "customer_sign_content_type"
+    t.integer  "customer_sign_file_size"
+    t.datetime "customer_sign_updated_at"
     t.integer  "reason_id"
-    t.string   "delivered_box_quantity"
-    t.datetime "created_at",             :null => false
-    t.datetime "updated_at",             :null => false
+    t.integer  "delivered_box_quantity"
+    t.datetime "created_at",                 :null => false
+    t.datetime "updated_at",                 :null => false
   end
 
   add_index "orders", ["branch_id"], :name => "index_orders_on_branch_id"
